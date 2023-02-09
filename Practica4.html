@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts</title>
+    <style> 
+       * {
+        box-sizing: border-box;
+       }
+       body{
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       header{
+        background-color: blueviolet;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: aliceblue;
+       }
+       nav{ 
+        float: left;
+        width: 30%;
+        height: 300px;
+        background-color: rgb(199, 199, 252);
+        padding: 20px;
+       }
+       nav ul{
+        list-style-type: none;
+        padding: 0;
+       }
+       article{
+        float:left;
+        padding: 20px;
+        width: 70%;
+        background-color: rgb(236, 220, 252);
+        height: 300px;
+       }
+       section::after{
+        content: "";
+        display: table;
+        clear: both;
+       }
+       footer{
+        background-color: rgb(248, 234, 250);
+        padding: 10px;
+        text-align: center;
+        color: rgb(114, 21, 122);
+       }
+       @media(max-width: 600px){
+        nav, article {
+            width: 100%;
+            height: auto;
+        }
+       }
+    </style>
+</head>
+<body>
+    <header> 
+        <h2>Venta de Ropa</h2> 
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="">Precios   </a></li>
+                <li><a href="">Marcas   </a></li>
+                <li><a href="">Rebajas   </a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Lista de ropa en venta y nueva</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto modi temporibus illum mollitia, ea officia voluptatum quas repellendus ipsum quia pariatur commodi doloremque veniam corrupti fugiat! Quasi, veniam cupiditate.
+            </p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere quo totam error aperiam. Expedita impedit veritatis aperiam cupiditate incidunt! Harum dolor illum at animi ipsa ipsum, pariatur laudantium esse a?
+            </p>
+        </article>
+    </section>
+    <footer>
+        <p>Tienda de Ropa &copy; 2023</p>
+    </footer>
+    <hr>
+    <h5>Luz Melissa Chavez Murillo - 08/02/23 - &copy; 2023- luzchavez21@cetis107.edu.mx</h5>
+</body>
+</html>
