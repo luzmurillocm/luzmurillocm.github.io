@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formularios en HTML</h1>
+    <hr>
+    <br>
+    <label for="nombre">Nombre</label>
+    <input type="text" placeholder="Teclea el nombre del Alumno" required> <br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" placeholder="Teclea la edad" required> <br><br>
+
+    <label for="fecha_nacimiento">Fecha de nacimiento</label>
+    <input type="date" required> <br><br>
+
+    <input type="radio" name="sexo" required>Femenino
+    <input type="radio" name="sexo" required>Masculino
+    <br><br>
+
+    <label for="direccion">Dirección:</label> <br>
+    <textarea name="direccion" id="" cols="25" rows="5" placeholder="Teclea dirección"></textarea>
+    <br><br>
+
+    <label for="escuela">Escuela:</label>
+    <select name="escuela" id="">
+        <option value="Selecciona una escuela"></option>
+        <option value="cetis">CETIS 107</option>
+        <option value="cbtis">Cebetis 224</option>
+        <option value="otra">Otra</option>
+    </select>
+    <br><br>
+
+    <label for="materias">Materias cursadas:</label> <br>
+    <input type="checkbox" name="materias[]">Física <br>
+    <input type="checkbox" name="materias[]">Cálculo diferencial <br>
+    <input type="checkbox" name="materias[]">Ingles <br>
+    <input type="checkbox" name="materias[]">Programación web <br>
+    <br>
+
+    <label for="color">Color preferido:</label>
+    <input type="color" required> 
+    <br><br>
+
+    <label for="imagen_perfil">Imagen de perfil</label>
+    <input type="file" accept="png/jpg"> <br> 
+    <br>
+    <input type="submit" value="Guardar al alumno"> <br><br>
+
+    <h3>Luz Melissa Chavez Murillo 4AVP 13/02/23 Practica 05 &copy;</h3>
+    
+</body>
+</html>
