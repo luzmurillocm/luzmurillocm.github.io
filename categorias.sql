@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-02-2023 a las 01:44:19
--- Versión del servidor: 10.1.39-MariaDB
--- Versión de PHP: 7.3.5
+-- Tiempo de generación: 25-03-2023 a las 02:47:00
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `tienda_online`
+-- Base de datos: `tiendaenlinea`
 --
 
 -- --------------------------------------------------------
@@ -31,19 +30,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `categorias` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `descripcion` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `descripción` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `categorias`
 --
 
-INSERT INTO `categorias` (`id`, `nombre`, `descripcion`) VALUES
-(1, 'iPhone 11', 'Incluye un chip rápido y potente\r\n\r\nIncluye un sistema de dos cámaras'),
-(2, 'MacBook Air', 'Pantalla de 13 pulgadas\r\n\r\nResolución de 2560 x 1600\r\n\r\nSistema operativo MACOS'),
-(3, 'Mini audífonos Bluetooth', '¡Escucha música con auténtica y total libertad de cables!'),
-(4, 'Lentes de sol', 'Tipo: Lentes de sol\r\n\r\nPolarizado: No\r\n\r\nFiltro: UV 400'),
-(5, 'Escritorio ', 'Este escritorio minimalista de madera es perfecto para espacios de trabajo en casa y en oficina. ');
+INSERT INTO `categorias` (`id`, `nombre`, `descripción`) VALUES
+(1, 'Librero Minimalista', 'IDEAL PARA ORGANIZAR, ESPACIOS ABIERTOS, RESISTENTE Y MULTIFUNCIÓN, FÁCIL DE ARMAR, FACIL DE ARMAR, DE MADERA.'),
+(2, 'Silla Escritorio', 'Silla Escritorio para Oficina EJECUTIVA GIRATORIA con COLCHON ACOLCHONADO Y Soporte Lumbar Super Comoda Altura Ajustable'),
+(3, 'Lamparas', 'Juego de 2 lámparas táctiles de mesita de noche pequeña, 3 vías, regulables, puertos USB C, A y tomacorrientes, modernas para habitación de niños, con pantalla de lino y base plateada, color blanco'),
+(4, 'Alexa', 'Nuevo Echo Dot (5.ª generación, modelo de 2022) | Bocina inteligente con Alexa | Negro'),
+(5, 'Espejo con luz', 'Redlemon Espejo con Luz para Makeup Extra Grande Hollywood Vintage (44x35 cm), Espejo para Maquillaje con 9 Focos LED Regulables de Luz Blanca, Cálida y Neutra, Conexión USB, Soporte Ajustable 360°');
 
 --
 -- Índices para tablas volcadas
