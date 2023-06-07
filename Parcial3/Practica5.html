@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 5</title>
+    <style>
+        input[type=text]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 2px 0;
+            box-sizing: border-box;
+            font-size: 30px;
+            border: 0;
+        }
+        table tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+        table{
+            border-top: 0px;
+        }
+    </style>
+</head>
+<body style="width: 20%;">
+    <h1>Juego del gatooo</h1>
+    <form action="practica5.php" method="post">
+        <table>
+        <tr>
+            <td><input type="text" name="cuadro[]" value="X" required></td>
+            <td><input type="text" name="cuadro[]" value="O" required></td>
+            <td><input type="text" name="cuadro[]" value="O" required></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="cuadro[]" value="O" required></td>
+        <td><input type="text" name="cuadro[]" value="X" required></td>
+        <td><input type="text" name="cuadro[]" value="O" required></td>
+      </tr>
+      <tr>
+    <td><input type="text" name="cuadro[]" value="X" required></td>
+    <td><input type="text" name="cuadro[]" value="O" required></td>
+    <td><input type="text" name="cuadro[]" value="X" required></td>
+     </tr>
+
+    </table>
+    <br>
+    <input type="submit" value="revisar">
+    </form>
+    
+</body>
+</html>
