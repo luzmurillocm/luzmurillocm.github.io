@@ -9,26 +9,72 @@
 </head>
 <body>
     <?php
-        $nombre = $_POST["jugador"];
-        $palabra = $_POST["palabra"];
-        $vidas = $_POST["vidas"];
+        $nombre = $_POST["jugador"]; $palabra = $_POST["palabra"]; $vidas = $_POST["vidas"];
+        $frase = $_POST["frase"];
+        $b= false;
+
+        if(isset($_POST["frase"])){
+            $letra=$_POST["letra"];
+            //Asigna la letra al array de frase
+            for($i=0 ; $i<count(str_split($palabra));$i++){
+                if($palabra[$i] == $letra){
+                    $frase[$i] = $letra;
+                    $b = true;
+                }
+            }
+            //Resta visa en caso de que no coincida la letra
+            if(!$b){
+                echo "<h4>La letra ".$letra." no existe</h4>";
+                $vidas--;
+            }
+            //Valida si de terminaron las vidas
+            if($vidas <= 0){
+                echo "<h1>Juego terminado se agotaron las vidas!</h1>";
+                echo "<a href='practica6.html'>Regresar al inicio</a>";
+                return;
+            }
+            $terminado = false;
+            //Valida si ganó
+            for($j=0 ; $j<count(str_split($palabra)); $j++){
+                if(!$frase[$j]){
+                    $terminado = true;
+                }
+            }
+
+            if($terminado == false){
+                echo "<h1>Felicidades, lo lograste!</h1>";
+                echo "<a href='practica6.html'>Regresar al inicio</a>";
+                return;
+            }
+
+        }
     ?>
     <div class="container">
-        <div class="row">
-        <h1>Juego del Ahorcado</h1>
-        <h3>Nombre del jugador: <?php echo $nombre; ?></h3>
-        <?php
-            $letras = str_split($palabra); //[0]=´H´, [1]=O, [2]=L, [3]= A;
-            for($i=0; $i<(count($letras)); $i++){
-                echo "<input type=´text´ name=´frase[]´  style=´widht: 5%; ´>";
-            }
-        ?>
-        <div class="row mt-4">
-            <input type="text" name="letra" maxlength="1">
-        <input type="submit" value="Enviar Letra" class="btn btn-primary" widht: 10%;>
-        </div>
-    </div>
-        
+        <form action="practica6.php" method="POST">
+            <input type="hidden" value="<?php echo $nombre ?>" name="jugador">
+            <input type="hidden" value="<?php echo $palabra ?>" name="palabra">
+            <input type="hidden" value="<?php echo $vidas ?>" name="vidas">
+
+            <div class="row">
+                <h1>Juego del Ahorcado</h1><hr>
+                <h3>Nombre del jugador: <?php echo $nombre; ?></h3>
+                <h4>Número de vidas: <?php echo $vidas; ?></h4>
+                <?php
+                    $letras = str_split($palabra); //[0]='H', [1]='O', [2]='L', [3]='A';
+                    for($i=0; $i<(count($letras)); $i++){
+                        echo "<input type='text' name='frase[]' style='width: 5%;' value='".$frase[$i]."'>";
+                    }
+                ?>
+            </div>
+            <div class="row mt-4">
+                <div>
+                    <input type="text" name="letra" maxlength="1" required>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar letra" class="btn btn-primary">
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 </html>
