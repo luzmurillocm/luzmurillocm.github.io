@@ -48,36 +48,62 @@
                 echo"<h1> El Jugador Gano</h1>";
                 $casilla = 100;
             }
+
+
+
+
             //valida la escalera 
-            if($casilla == 16){
-                $casilla = 5;
-                echo "<h2>El jugador cayo en una <img src='serpiente.png' widht='5%' y subio a la casilla 15 </h2>";
+            if($casilla == 5){
+                $casilla = 16;
+                echo "<h3> El jugador cayo en una escalera <img src='escalera.png' width='50px'> y subio a la casilla 15</h3>";
             }
-            if($casilla == 33){
-                $casilla = 22;
-                echo "<h2>El jugador cayo en una <img src='serpiente.png' widht='5%' y subio a la casilla 15 </h2>";
+            if($casilla == 22){
+                $casilla = 33;
+                echo "<h3> El jugador cayo en una escalera <img src='escalera.png' width='50px'> y subio a la casilla 15</h3>";
             }
-            if($casilla == 20){
-                $casilla = 9;
-                echo "<h2>El jugador cayo en una <img src='serpiente.png' widht='5%' y subio a la casilla 15 </h2>";
+            if($casilla == 9){
+                $casilla = 20;
+                echo "<h3> El jugador cayo en una escalera <img src='escalera.png' width='50px'> y subio a la casilla 15</h3>";
             }
-            if($casilla == 56){
-                $casilla = 45;
-                echo "<h2>El jugador cayo en una <img src='serpiente.png' widht='5%' y subio a la casilla 15 </h2>";
+            if($casilla == 45){
+                $casilla = 56;
+                echo "<h3> El jugador cayo en una escalera <img src='escalera.png' width='50px'> y subio a la casilla 15</h3>";
             }
-            if($casilla == 24){
-                $casilla = 13;
-                echo "<h2>El jugador cayo en una <img src='serpiente.png' widht='5%' y subio a la casilla 15 </h2>";
+            if($casilla == 13){
+                $casilla = 24;
+                echo "<h3> El jugador cayo en una escalera <img src='escalera.png' width='50px'> y subio a la casilla 15</h3>";
             }
-            //escaleras
+            //serpientes
+            if($casilla == 17){
+                $casilla = 28;
+                echo "<h3> El jugador cayo en una serpiente <img src='serpiente.png' width='50px'> y bajo a la casilla 17</h3>";
+            }
             if($casilla == 25){
                 $casilla = 36;
-                echo "<h2>El jugador cayo en una <img src='escalera.png' widht='5%' y subio a la casilla 15 </h2>";
+                echo "<h3> El jugador cayo en una serpiente <img src='serpiente.png' width='50px'> y bajo a la casilla 25</h3>";
             }
-            if($casilla == 16){
-                $casilla = 28;
-                echo "<h2>El jugador cayo en una <img src='escalera.png' widht='5%' y subio a la casilla 15 </h2>";
+            if($casilla == 40){
+                $casilla = 51;
+                echo "<h3> El jugador cayo en una serpiente <img src='serpiente.png' width='50px'> y bajo a la casilla 40</h3>";
             }
+            if($casilla == 54){
+                $casilla = 65;
+                echo "<h3> El jugador cayo en una serpiente <img src='serpiente.png' width='50px'> y bajo a la casilla 54</h3>";
+            }
+            if($casilla == 88){
+                $casilla = 99;
+                echo "<h3> El jugador cayo en una serpiente <img src='serpiente.png' width='50px'> y bajo a la casilla 88</h3>";
+            }
+
+
+
+
+
+
+
+
+
+
 
 
         }else{
